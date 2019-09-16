@@ -15,8 +15,14 @@ function start(route, handle) {
             route(handle, pathname, res, req);
         }
     });
-
-    server.listen(port, hostname, () => {
+	
+	// 监听本地IP
+    // server.listen(port, hostname, () => {
+    //     console.log(`服务器运行在 http://${hostname}:${port}/`);
+    // });
+	
+	// 监听所有IP
+	server.listen(port, () => {
         console.log(`服务器运行在 http://${hostname}:${port}/`);
     });
 }
